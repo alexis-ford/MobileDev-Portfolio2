@@ -11,3 +11,11 @@ The features of this exercise app include:
  add and reset reps and sets 
  homescreen to pick workout split
  finished screen displaying positive message and image
+
+
+ Screens: 
+ Home
+ UpperBody/LowerBody
+ UpperBodyWorkout/LowerBodyWorkout
+ WorkoutComplete
+
