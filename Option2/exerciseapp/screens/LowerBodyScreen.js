@@ -12,6 +12,9 @@ export function LowerBodyWorkoutScreen ({route, navigation}) {
   let [set,setSet] = useState(0)
   let lowerExercises = useContext(LowerContext)
   let currentExercise = lowerExercises.find(ex => ex.key === exerciseKey)
+  let toComplete =  useCallback (() => {
+    navigation.navigate("WorkoutComplete")
+  })  
   return (
     <View style={styles.container}>
       <Text style={exerciseStyles.head}>{currentExercise.name}</Text>
@@ -45,6 +48,9 @@ export function LowerBodyWorkoutScreen ({route, navigation}) {
         </Pressable>
         <Pressable style={homeStyles.button} onPress={() => navigation.navigate("Home")}>
           <Text style={homeStyles.text}>Home</Text>
+        </Pressable>
+        <Pressable style={homeStyles.button} onPress={() => navigation.navigate("WorkoutComplete")}>
+          <Text style={homeStyles.text}>Workout Finished</Text>
         </Pressable>
       </View>
       <StatusBar style="auto" />
